@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>KWEH! Faction</title>
+  <meta name="description" content="KWEH! is a Final Fantasy XIV faction. Savage prog, extreme farms, and a weekly Glamour of the Week vote.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Alegreya+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap">
+</head>
+<body>
+  <canvas id="scene" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <a class="mark" href="#home">KWEH!</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#home">Home</a>
+      <a href="#glamour">Glamour</a>
+      <a href="#about">About</a>
+      <a href="#crew">Crew</a>
+      <a href="#join">Join</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="sec hero" id="home">
+      <span class="kicker">A Final Fantasy XIV faction</span>
+      <h1>KWEH!</h1>
+      <p class="tag">We clear the hard stuff, we dress like main characters, and we never shut up about it.</p>
+      <p class="meta" id="worldline"></p>
+      <div class="hint"><span>Enter the hall</span><span class="arrow"></span></div>
+    </section>
+
+    <section class="sec right" id="glamour">
+      <div class="panel">
+        <span class="eyebrow" id="weekline">Glamour of the Week</span>
+        <h2 id="featName"></h2>
+        <div class="feature"><span class="pill" id="featRole"></span><span class="job" id="featJob"></span></div>
+        <p class="muted">Every week the faction votes on whose glamour takes the dais. The winner holds the front page for seven days.</p>
+        <hr class="rule">
+        <div class="vote">
+          <div class="vote-head"><h3>Vote for next week</h3><span class="closes">Closes Sun 11:59 PM PT</span></div>
+          <div id="opts"></div>
+          <p class="vote-status" id="voteStatus" role="status">Connecting to the ballot box…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="about">
+      <div class="panel">
+        <span class="eyebrow">The hall</span>
+        <h2>Who we are</h2>
+        <p>KWEH! is a tight crew that takes the fights seriously and itself not at all. Savage prog, extreme farms, maps, and way too much time in the glamour dresser. New faces welcome. Bring your best fit.</p>
+        <div class="sched" aria-label="Weekly schedule">
+          <div><span class="d">TUE</span><span class="t">8:00 PM PT</span><span class="a">Savage prog</span></div>
+          <div><span class="d">THU</span><span class="t">7:30 PM PT</span><span class="a">Extreme farms and mentor roulettes</span></div>
+          <div><span class="d">FRI</span><span class="t">9:00 PM PT</span><span class="a">Treasure maps</span></div>
+          <div><span class="d">SUN</span><span class="t">6:00 PM PT</span><span class="a">Glamour reveal and hangout</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec right" id="crew">
+      <div class="panel">
+        <span class="eyebrow">The roster</span>
+        <h2>The crew</h2>
+        <div class="roster" id="roster"></div>
+        <span class="note">Sample names except the featured glamour. Edit src/config.ts.</span>
+      </div>
+    </section>
+
+    <section class="sec" id="join">
+      <div class="panel">
+        <span class="eyebrow">Recruiting · all roles</span>
+        <h2>Answer the call</h2>
+        <ol class="steps">
+          <li><div><b>Find us in game</b><span class="muted" id="joinworld"></span></div></li>
+          <li><div><b>Join the Discord</b><span class="muted">Raid nights, glamour votes, and screenshots all live there.</span></div></li>
+          <li><div><b>Show up to one night</b><span class="muted">No application. Run with us once and see if it clicks.</span></div></li>
+        </ol>
+        <div class="copy">
+          <code id="invite"></code>
+          <button class="btn" id="copybtn" type="button">Copy invite</button>
+        </div>
+        <a class="btn ghost" href="#home">Return to the hall</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>Fan-made faction page. Not affiliated with Square Enix. FINAL FANTASY XIV is a registered trademark of Square Enix.</footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
