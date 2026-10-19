@@ -29,22 +29,25 @@ export interface SiteConfig {
   featured: string;
 }
 
+/** Prefix public files with the site's base path so they work on GitHub Pages. */
+const asset = (path: string) => import.meta.env.BASE_URL + path;
+
 export const CONFIG: SiteConfig = {
   world: 'Your World',
   dataCenter: 'Your Data Center',
   discord: 'discord.gg/your-invite',
   week: '2026-10-19',
   weekLabel: 'Week of Oct 19',
-  featured: 'Your Name Here',
+  featured: 'Ian_Uzumaki',
 };
 
 export const MEMBERS: Member[] = [
   {
-    name: 'Ian Uzumaki',
+    name: 'Ian_Uzumaki',
     job: 'Ninja',
     role: 'DPS',
-    photo: '/glamour/your-name-here.webp',
-    thumb: '/glamour/your-name-here-thumb.webp',
+    photo: asset('glamour/ian-uzumaki.webp'),
+    thumb: asset('glamour/ian-uzumaki-thumb.webp'),
   },
   { name: 'Bram Oakhollow', job: 'White Mage', role: 'Healer' },
   { name: 'Kiko Pebblebottom', job: 'Black Mage', role: 'DPS' },

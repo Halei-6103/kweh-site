@@ -1,12 +1,10 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  // For GitHub Pages at username.github.io/repo-name/, set base: '/repo-name/'
-  base: '/',
+  base: '/kweh-site/',
   build: {
     rollupOptions: {
       output: {
-        // Keep the big libraries in their own cached chunks.
         manualChunks: {
           three: ['three'],
           supabase: ['@supabase/supabase-js'],

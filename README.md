@@ -39,7 +39,7 @@ supabase/schema.sql     votes table + security rules
 ## Rotate the Glamour of the Week
 
 1. Put the winner's cutout in `public/glamour/` (transparent background, full body, portrait).
-2. In `src/config.ts`, set `photo` (and `thumb` for the roster card) on their member entry.
+2. In `src/config.ts`, set `photo` (and `thumb` for the roster card) on their member entry using `asset('glamour/filename.webp')`.
 3. Update `featured`, `week` (the new Monday, e.g. `2026-10-26`), and `weekLabel`.
 
 Changing `week` starts a fresh ballot. Old votes stay in the database but stop counting.
@@ -62,6 +62,6 @@ Anonymous sign-in means one vote per browser, which is fine for a friendly facti
 Any static host works. Run `npm run build` and upload `dist/`.
 
 - **Netlify / Vercel:** connect the repo, build command `npm run build`, output `dist`. Add the two `VITE_SUPABASE_*` variables in the host's environment settings.
-- **GitHub Pages:** if the site lives at `username.github.io/repo-name/`, set `base: '/repo-name/'` in a `vite.config.ts`.
+- **GitHub Pages:** base is already set to `/kweh-site/` in `vite.config.ts` for https://halei-6103.github.io/kweh-site/.
 
 Fan-made. Not affiliated with Square Enix.
